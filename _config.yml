@@ -11,3 +11,5 @@ google_analytics:
 
 highlighter: rouge
 
+markdown: kramdown
+
