@@ -3,9 +3,7 @@
 Это обычная строка 1234567890  
 тест синхронизации  
 
-The derivative of the function $$f$$ with respect to the variable $$x$$ is the function $$f'$$ whose value at $$x$$ is<br>
-$$f'(x) = \lim_{h\to 0} \frac{f(x+h)-f(x)}{h}$$
-provided the limit exists.
+:blush:
 
 Это обычная строка 1234567890
 
