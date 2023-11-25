@@ -6,8 +6,6 @@ plugins:
 title: Лабы <!-- Это текст для закладки страницы в браузере -->
 description: Серия из моих лабораторных работ по созданию <b>3D-моделей</b> местности
 
-markdown: kramdown
-
 show_downloads: false
 google_analytics:
 
