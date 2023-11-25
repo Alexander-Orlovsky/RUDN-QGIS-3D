@@ -1,3 +1,10 @@
+---
+layout: default
+title: «"Это прописано в title вверху самой страницы»
+description: Это прописано в description вверху самой страницы
+permalink: /README.html
+---
+
 
 # Заголовок уровня 1
 Это обычная строка 1234567890  
