@@ -1,10 +1,7 @@
 ---
-layout: default
 title: Серия «Мои замечательные лабораторные»
 description: Моя лаба по 3D
-permalink: /README.html
 ---
-
 
 
 # Заголовок уровня 1
