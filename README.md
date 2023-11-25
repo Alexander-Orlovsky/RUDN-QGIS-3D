@@ -1,6 +1,5 @@
 ---
-layout: default
-title: «Это прописано в title вверху самой страницы»
+title: «"Это прописано в title вверху самой страницы»
 description: Это прописано в description вверху самой страницы
 ---
 
