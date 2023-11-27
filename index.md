@@ -5,7 +5,7 @@ description: Это <i>текст</i> **description** из файла Index.md
 ---
 
 
-ЭТО ФАЙЛ INDEX
+ЭТО ФАЙЛ INDEX ЭТО ФАЙЛ INDEX
 
 
 С title/description нашел пока такой выход:
