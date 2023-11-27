@@ -1,12 +1,7 @@
 ---
 layout: default
-<<<<<<< Updated upstream
-title: Серия «Мои замечательные лабораторные» 15:56
-description: Это моя лаба по 3D
-=======
 title: Серия «Мои замечательные лабораторные»
 description: Моя лаба по 3D
->>>>>>> Stashed changes
 permalink: /README.html
 ---
 
