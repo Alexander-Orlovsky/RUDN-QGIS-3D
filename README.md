@@ -1,4 +1,9 @@
-
+---
+title: Это <i>текст</i> **title** из файла README.md
+description: Это <i>текст</i> **description** из файла README.md
+permalink: /README.html
+---
+<!-- ВАЖНО: без "layout: default" локально не работает - сайт генерится, но без макета -->
 
 
 
