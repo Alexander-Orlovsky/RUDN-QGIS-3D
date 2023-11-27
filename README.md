@@ -1,6 +1,5 @@
 ---
-title: Серия «Мои замечательные лабораторные»
-description: Моя лаба по 3D
+description: Моя лаба по 3D - это description
 ---
 
 
