@@ -1,12 +1,11 @@
 ---
-title: Это <i>текст</i> **title** из файла Index.md
 description: Это <i>текст</i> **description** из файла Index.md
 ---
 
 
 
 
-#  HTML-and-CSS 111
+#  HTML-and-CSS
 ## Qgis Processing plugin
 
 <!-- TOC -->
