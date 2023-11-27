@@ -4,6 +4,11 @@ title: Это <i>текст</i> **title** из файла Index.md
 
 
 
+[![Загрузить PDF](media/coollogo_com-226026309.gif] (media/Процесс создания 3D-модели в QGIS и Qgis2threejs _ v-2023-11-21.pdf)
+[![Файл](media/coollogo_com-102213361.gif] (media/Логотип РУДН в SVG - 2023-11-21.txt)
+
+
+
 
 #  HTML-and-CSS 222
 ## Qgis Processing plugin
