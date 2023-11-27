@@ -1,4 +1,8 @@
-
+---
+layout: default
+title: Это <i>текст</i> **title** из файла Index.md
+description: Это <i>текст</i> **description** из файла Index.md
+---
 
 
 ЭТО ФАЙЛ INDEX
