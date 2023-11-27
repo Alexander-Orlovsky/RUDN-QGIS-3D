@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+  <head>
+    <meta charset="UTF-8">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Серия «Мои замечательные лабораторные» | Лабы</title>
+<meta name="generator" content="Jekyll v4.3.2" />
+<meta property="og:title" content="Серия «Мои замечательные лабораторные»" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Это моя лаба по 3D" />
+<meta property="og:description" content="Это моя лаба по 3D" />
+<link rel="canonical" href="http://localhost:4000/README.html" />
+<meta property="og:url" content="http://localhost:4000/README.html" />
+<meta property="og:site_name" content="Лабы" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Серия «Мои замечательные лабораторные»" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"Это моя лаба по 3D","headline":"Серия «Мои замечательные лабораторные»","url":"http://localhost:4000/README.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+  <body>
+    <a id="skip-to-content" href="#content">Skip to the content.</a>
+
+    <header class="page-header" role="banner">
+      <h1 class="project-name">Серия «Мои замечательные лабораторные»</h1>
+      <h2 class="project-tagline">Это моя лаба по 3D</h2>
+      
+      
+        <a href="" class="btn">Download .zip</a>
+        <a href="" class="btn">Download .tar.gz</a>
+      
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      <h1 id="html-and-css">HTML-and-CSS</h1>
+<h2 id="qgis-processing-plugin">Qgis Processing plugin</h2>
+
+<!-- TOC -->
+
+<ul>
+  <li><a href="#html-and-css">HTML-and-CSS</a>
+    <ul>
+      <li><a href="#qgis-processing-plugin">Qgis Processing plugin</a>
+        <ul>
+          <li><a href="#1---finestra-processing">1. - Finestra processing</a></li>
+          <li><a href="#2---opzioni">2. - OPZIONI</a></li>
+          <li><a href="#3-css---esempio-arial-fixed">3. CSS - ESEMPIO ARIAL FIXED</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><a href="#4-dati-di-esempio">4. Dati di esempio</a></li>
+  <li><a href="#5-videotutorial">5. Videotutorial</a></li>
+  <li><a href="#6-ringraziamenti">6. Ringraziamenti</a></li>
+</ul>
+
+<!-- /TOC -->
+
+<h3 id="1---finestra-processing">1. - Finestra processing</h3>
+<p>Il plugin, una volta caricato, compare negli script di processing nella cartella HTML</p>
+
+<p>Il plugin permette la composizione di una pagina HTML con i dati da una fonte tra quelle compatibili.</p>
+
+<ol>
+  <li>sorgente dati, eventualmente anche filtrati e/o solo selezionati se da mappa;</li>
+  <li>selettore campi dati da inserire nell’html;</li>
+  <li>[opzionale] espressione filtro;</li>
+  <li>[opzionale] titolo in testa alla pagina html;</li>
+  <li>[opzionale] icona o immagine in alto a sinistra;</li>
+  <li>[opzionale] css da includere nell’html;</li>
+  <li>dimensioni icona e foto;</li>
+  <li>scelta tra link con percorso assoluto (default) o relativo;</li>
+  <li>file in uscita.</li>
+</ol>
+
+<p>Il plugin riconosce i campi data e quelli in cui è memorizzata l’immagine o le immagini purchè con estensione di file immagine (gif; jpeg; jpg; png; svg).</p>
+
+<p>I campi selezionati possono essere riordinati a piacimento.</p>
+
+<p>Le dimensioni dell’icona e delle immagini possono essere espresse in tutte le unità di misura previste dall’html.</p>
+
+<p>Il file css determina tutte le caratteristiche estetiche del file prodotto, riferendosi sempre all’elemento ‘Table’, alt tag <strong>‘b’</strong> per il titolo ed al tag <strong>‘div’</strong> per l’immagine o l’icona in intestazione.</p>
+
+<p>I file prodotti, se temporanei, avranno sempre percorsi assoluti, altrimenti non sarebbero funzionanti, se salvati possono avere sia percorsi assoluti sia relativi.</p>
+
+<p>Per poter eventualmente traferire il progetto con i file html relativi, tutti i file devono risiedere in sottocartelle della cartella di progetto.</p>
+
+<p>Lo script effettua una serie di controlli sulla congruenza dei percorsi dei file origine (sorgente, css, icona/immagine) e avverte se
+c’è la possibilità che il file html prodotto possa non funzionare correttamente.</p>
+
+<p>Per default il percorso di progetto viene considerato per primo, in seconda scelta il percorso del file sorgente.</p>
+
+<p><em>NOTA BENE: 
+Con i file temporanei, se i campi contengono percorsi relativi, l’html prodotto non avrà le immagini correttamente visualizzate.</em></p>
+
+<p>↑<a href="#HTML-and-CSS">torna su</a>↑</p>
+
+<h3 id="2---opzioni">2. - OPZIONI</h3>
+
+<ol>
+  <li>Espressione filtro: un filtro componibile nativo di QGIS;</li>
+  <li>Titolo: una qualsiasi combinazione alfanumerica nella casella di testo, senza apici, il sistema la mette in rosso, ma funziona perfettamente; altrimenti una qualsiasi composizione entro il solito calcolatore, ovviamente si tratta di una scritta non dinamica;</li>
+  <li>Icona o immagine: una qualsiasi immagine tra quelle compatibili:</li>
+  <li>CSS: questa è la parte più interessante dato che permette una personalizzazione accurata della pagina html prodotta. Come anzidetto i tag utilizzati sono <strong>‘Table’</strong>, <strong>‘b’</strong> e <strong>‘div’</strong>, per generare comodamente il css vi sono diversi tools gratuiti online tra cui <strong>https://divtable.com/table-styler/</strong> che permette con pochi passaggi di ottenere risultati veramente notevoli e la cui unica limitazione è la fantasia dell’autore. Il sito da anche la possibilità di definire ogni singolo aspetto dell’impaginazione.</li>
+</ol>
+
+<p>↑<a href="#HTML-and-CSS">torna su</a>↑</p>
+
+<h3 id="3-css---esempio-arial-fixed">3. CSS - ESEMPIO ARIAL FIXED</h3>
+<p>A titolo di esempio ecco un css:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>`/* Personalizzazione Titolo */
+b {
+	font-family: Arial;
+	font-size: 24pt;
+	letter-spacing: 0.1px;
+	word-spacing: 0.2px;
+	color: #000000;
+}
+/* Caratteristiche generali della tabella */
+table.Table {
+	font-family: Arial;
+	font-size: 12pt;
+	letter-spacing: 0.1px;
+	word-spacing: 0.2px;
+	color: #000000;
+	font-weight: normal;
+	text-decoration: none;
+	font-style: normal;
+	font-variant: normal;
+	text-transform: none;
+	border: 1.5px solid #674d3c;
+	background-color: #fff2df;
+	border-collapse: collapse;
+	width: 145mm;
+}
+/* Caratteristiche dell'intestazione  */
+table.Table thead th{
+	font-size: 8pt;
+	background: #fff2df;
+	background: -moz-linear-gradient(top, #fff2df 0%, #d9ad7c 66%, #a2836e 100%);
+	background: -webkit-linear-gradient(top, #fff2df 0%, #d9ad7c 66%, #a2836e 100%);
+	background: linear-gradient(to bottom, #a2836e 0%, #a2836e 66%, #a2836e 100%);
+	border-bottom: 0px solid #444444;
+	text-align: center;
+}
+/* Caratteristiche generali delle colonne */
+table.Table td {
+	border: 1.5px solid #674d3c;
+	padding: 1px 1px;
+	font-size: 12px;
+}
+/* Caratteristiche della prima colonna*/
+table.Table td:first-child {
+	text-align: center;
+	width: 5mm;
+	font-size: 12px;
+}
+/* Caratteristiche della seconda colonna notare 'first-child + td' vale anche 'nth-child(2)'*/
+table.Table td:first-child + td {
+	text-align: center;
+	width: 20mm;
+	font-size: 12px;
+}
+/* Caratteristiche della terza colonna notare 'first-child + td + td' vale anche 'nth-child(3)'*/
+table.Table td:first-child + td + td {
+	text-align: center;
+	font-size: 8pt;
+	width: 50mm;
+}
+/* Caratteristiche delle colonne successive notare 'nth-child(even)'*/
+table.Table td:nth-child(even) {
+	text-align: center;
+	width: 50mm;
+}
+/* Caratteristiche delle */
+table.Table th {
+	color: #fff2df;
+	border: 1.5px solid #674d3c;
+	padding: 1px 1px;
+}
+/* Caratteristiche generiche del corpo dell'html*/
+table.Table tbody td {
+	font-size: 8pt;
+}
+table.Table tr:nth-child(even){
+	background: #d9ad7c;
+}
+/* Caratteristiche del div entro cui sta l'immagine*/
+div {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 15pt; color: #674d3c;
+	text-align: left;
+	line-height: 1.5;
+}`
+</code></pre></div></div>
+<p>come si può notare la larghezza <strong>width</strong> delle colonne e la larghezza della tabella sono espresse in mm e questo è veramente utile per produrre impaginazioni precise.
+↑<a href="#HTML-and-CSS">torna su</a>↑</p>
+
+<h1 id="4-dati-di-esempio">4. Dati di esempio</h1>
+<ul>
+  <li><a href="./script-css/css/Arial%20fixed.css">Arial fixed (mm)</a></li>
+  <li><a href="./script-css/css/Black.css">Black</a></li>
+  <li><a href="./script-css/css/Comicgreen.css">Comicgreen</a></li>
+  <li><a href="./script-css/css/Grey.css">Grey</a></li>
+</ul>
+
+<p>↑<a href="#HTML-and-CSS">torna su</a>↑</p>
+<h1 id="5-videotutorial">5. Videotutorial</h1>
+<p><a href="https://youtu.be/reoXJ7Pmk-I" title="HTML with CSS generator"><img src="https://img.youtube.com/vi/reoXJ7Pmk-I/0.jpg" alt="" /></a></p>
+
+<p>↑<a href="#HTML-and-CSS">torna su</a>↑</p>
+
+<h1 id="6-ringraziamenti">6. Ringraziamenti</h1>
+<p><a href="https://www.qgis.org/it/site/">QGIS.org</a> - <a href="https://divtable.com/table-styler/">divtable.com</a> - <a href="https://pigrecoinfinito.com/">Totò Fiandaca</a> - A. Cusano</p>
+
+<p>↑<a href="#HTML-and-CSS">torna su</a>↑</p>
+
+<h1 id="заголовок-уровня-1">Заголовок уровня 1</h1>
+<p>Это обычная строка 1234567890<br />
+тест синхронизации<br />
+Это обычная строка 1234567890</p>
+
+<h2 id="заголовок-уровня-2">Заголовок уровня 2</h2>
+<p>Это обычная строка 1234567890<br />
+Это обычная строка 1234567890<br />
+хххх</p>
+
+<h3 id="заголовок-уровня-3">Заголовок уровня 3</h3>
+<p>Это обычная строка 1234567890<br />
+Это обычная строка 1234567890</p>
+<h4 id="заголовок-уровня-4">Заголовок уровня 4</h4>
+<p>Это обычная строка 1234567890<br />
+Это обычная строка 1234567890</p>
+<h5 id="заголовок-уровня-5">Заголовок уровня 5</h5>
+<p>Это обычная строка 1234567890<br />
+Это обычная строка 1234567890</p>
+<h6 id="заголовок-уровня-6">Заголовок уровня 6</h6>
+<p>Это обычная строка 1234567890<br />
+Это обычная строка 1234567890
+####### Заголовок уровня 7
+Это обычная строка 1234567890<br />
+Это обычная строка 1234567890
+######## Заголовок уровня 8
+Это обычная строка 1234567890<br />
+Это обычная строка 1234567890</p>
+
+<h2 id="лаба-с-кодовым-названием-rudn-qgis-3d">Лаба с кодовым названием RUDN-QGIS-3D</h2>
+<p>Порядок создания <strong>3D-модели</strong> на <em>небольшой</em> участок местности со зданиями и внедренными 3D-моделями объектов в QGIS и Qgis2threejs</p>
+
+<p>========== 001 =================================</p>
+
+<h3 id="порядок-создания-3d-модели-на-небольшой--участок-местности-со-зданиями-и-внедренными-3d-моделями-объектов-в-qgis-и-qgis2threejs"><strong>Порядок создания 3D-модели на небольшой  участок местности со зданиями и внедренными 3D-моделями объектов в QGIS и Qgis2threejs</strong></h3>
+
+<h4 id="1-подготовительная-часть"><strong>1) Подготовительная часть</strong></h4>
+
+<h4 id="надстрочные-знаки-km2-подстрочные-знаки-co2">Надстрочные знаки: km<sup>2</sup>. Подстрочные знаки: CO<sub>2</sub></h4>
+
+<p>Here is a famous formula два доллара: \(E=mc^2\).</p>
+
+<p>Here is a famous formula один доллар: $E=mc^2$.</p>
+
+<p>Создайте копию файла «Заготовка Проекта 3D.qgs», расположенного в корне папки «RUDN-QGIS-3D» с учебными материалами.</p>
+
+<p>Переименуйте его, например, «<strong>Проект 3D - Часть 2 - со зданиями.qgs</strong>» и откройте этот проект в QGIS.</p>
+
+<p>В панели Слои переместите слой «Здания - для второй части работы» на самый верх и включите его видимость.</p>
+
+<p>Добавьте в проект вашу DEM (цифровую модель рельефа). Это файл с расширением <strong>*.tif</strong>.</p>
+
+<p>В панели Слои переместите слой с DEM в самый низ и отключите его видимость.</p>
+
+<hr />
+
+<table>
+  <thead>
+    <tr>
+      <th>sdfdsf</th>
+      <th>fdgfdfd</th>
+      <th>ddddd</th>
+      <th>ggggg</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>324</td>
+      <td>5435435</td>
+      <td>4435435</td>
+      <td>6757657</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Это пример переноса строки (разрыв) внутри одного абзаца. Сейчас будет двойной пробел.<br />
+Он успешно отрабатывается Writage. А вот обратный слеш, он<br />
+Writage тоже отрабатывается. Зато он отрабатывается в GitHub.</p>
+
+<p>А это уже новый абзац.</p>
+
+<p>-—————————————————</p>
+
+<p>Ниже <code class="language-plaintext highlighter-rouge">начинается многострочный</code> блок кода</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!doctype html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;!-- Заголовок документа --&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;!-- Тело документа --&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div></div>
+
+<p>Блок кода завершился</p>
+
+<hr />
+<hr />
+
+\[\phi_{n}(\kappa) = \frac{1}{4\pi^{2}\kappa^{2}}\int_{0}^{\infty}\frac{\sin(\kappa R)}{\kappa R}\frac{\partial}{\partial R}\left\lbrack R^{2}\frac{\partial D_{n}(R)}{\partial R} \right\rbrack\, dR\]
+
+<hr />
+<hr />
+
+<p>Длинный блок кода</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="nt">&lt;br&gt;</span> <span class="ni">&amp;nbsp;&amp;nbsp;</span> <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"https://www.rudn.ru/u/www/images/for_smi_image/logo_rudn_eng.png"</span> <span class="na">width=</span><span class="s">160</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;p</span> <span class="na">style=</span><span class="s">"font-size: 16px; color: #0079c1; text-indent: 5px; margin-top: 5px;"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;b&gt;</span> <span class="ni">&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;</span> 3D-геопортал окрестностей Махачкалы <span class="nt">&lt;/b&gt;</span> <span class="nt">&lt;/p&gt;</span>
+
+</code></pre></div></div>
+
+<hr />
+<hr />
+
+<p><strong>КАРТА</strong><br />
+<script src="https://embed.github.com/view/geojson/benbalter/dc-wifi-social/master/bars.geojson?height=300&amp;width=500"></script></p>
+
+<hr />
+<hr />
+
+<p><strong><em>Использование GeoJSON</em></strong><br />
+Например, можно создать простую карту:</p>
+<pre><code class="language-geojson">{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": 1,
+      "properties": {
+        "ID": 0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+              [-90,35],
+              [-90,30],
+              [-85,30],
+              [-85,35],
+              [-90,35]
+          ]
+        ]
+      }
+    }
+  ]
+}
+</code></pre>
+
+<hr />
+<hr />
+<p>Блок ниже оформлен просто как “Цитирование текста”:</p>
+
+<blockquote>
+  <h2 id="why-write-a-program-to-do-that">Why write a program to do that?</h2>
+
+  <p>Note that you can easily manually count the number of bacteria colonies shown
+in the morphometric example above. Why should we learn how to write a Python
+program to do a task we could easily perform with our own eyes? There are at
+least two reasons to learn how to perform tasks like these with Python and
+skimage:</p>
+
+  <ol>
+    <li>What if there are many more bacteria colonies in the Petri dish? For 
+ example, suppose the image looked like this:</li>
+  </ol>
+</blockquote>
+
+<hr />
+<hr />
+
+<!-- details - это тэг html. Без атрибута "open" по умолчанию свернуто -->
+
+<details open=""><summary>CLICK ME - пример сворачиваемого/разворачиваемого раздела</summary>
+
+### Так можно скрыть что угодно, даже код!
+```ruby
+   puts "Hello World"
+```
+и вообще, как понимаю, все, что угодно :)
+</details>
+
+<hr />
+<hr />
+
+<details><summary><h3>CLICK ME - пример сворачиваемого/разворачиваемого раздела</h3></summary>
+
+<h3>Тесты А.В.Орловского</h3>
+Так можно скрыть что угодно, даже код!  
+и вообще, как понимаю, все, что угодно :)
+
+</details>
+
+<hr />
+<hr />
+
+<table style="border: 2px solid #104E8B; background-color:#CCC;">
+    <tr>
+        <td style="border: 1px solid #ff0000; background-color:#CCC;">
+    
+<details><summary><h3>CLICK ME - пример сворачиваемого/разворачиваемого раздела</h3></summary>
+    <h3>Тесты А.В.Орловского</h3>
+           Так можно скрыть что угодно, даже код! <br />
+           79797545235465765777987987987 <br />
+           79797545235465765777987987987 <br />
+           и вообще, как понимаю, все, что угодно :) <br />
+           и вообще, как понимаю, все, что угодно :) <br />
+
+</details>
+
+</td></tr></table>
+
+<hr />
+<hr />
+
+<!-- ===================================================================================================================== -->
+
+<p style="letter-spacing: 4.5px">Lorem ipsum </p>
+<p style="letter-spacing: -2pt; line-height:25pt"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+
+<font color="#1f33b4ff">Синий текст</font>
+<p><br /></p>
+<font face="Courier New" size="8" color="green"><b>Это мой текст!</b></font>
+
+<h1>Моя подборка примеров блоков HTML-кода</h1>
+
+<p><br /></p>
+<h2 style="font-size: 2.2em; font-family: monospace; color: #1a9835ff">Тесты А.В.Орловского</h2>
+
+<h3>Это пример вставки ЗЩ в свою HTML-страницу с использованием iframe</h3>
+<p>А это правильные рекомендации: You can use the height and width attributes to specify the size of the iframe:</p>
+<iframe src="http://umap.openstreetmap.fr/ru/map/anonymous-edit/520224:cfEjyfnEYo7wlFFITRK3W5R8R4Y" style="border:2px solid red; height:200px; width:100%; margin-left:100px;">Почему-то текст здесь не на что не влияет, но и не виден???</iframe>
+
+<p><br />
+<br />
+<br /></p>
+<h3>Это пример вставки гиперссылки, как картинки и логически связанной с ней подписью:</h3>
+<!-- Нашел его здесь https://netology-code.github.io/guides/wm-cheat-sheet -->
+
+<p><br /></p>
+<h3>Это пример использования аббревиатур:</h3>
+<!-- Нашел его здесь https://webref.ru/course/html-content/inline-semantics -->
+<p>
+  Я только что купил <abbr title="Compact Disc">CD</abbr>.
+</p>
+
+<p><br /></p>
+<h3>Это пример строчной цитаты (кавычки):</h3>
+<!-- Нашел его здесь https://webref.ru/course/html-content/inline-semantics -->
+<!-- <blockquote> является блочным элементом, у него есть строчная версия <q> -->
+<p>
+  Он сказал <q>Привет, мир</q> и просто ушёл.
+</p>
+
+<p><br /><br /><br /></p>
+<p>ххххххххххххххх Это как бы нижний элемент у меня на странице ххххххххххххххх</p>
+<p><br /><br /><br /></p>
+
+<div class="footer">
+        &copy; 2004 Foo Corporation
+</div>
+
+<ul>
+  <li>элемент маркированного списка</li>
+  <li>ещё один элемент ненумерованного списка</li>
+  <li>буллеты элементов могут быть разными</li>
+</ul>
+
+<ol>
+  <li>Элемент нумерованного списка</li>
+  <li>Элемент №2 того же списка</li>
+  <li>Элемент №3 списка — элементы нумеруются по порядку, цифра в начале строки не имеет значения</li>
+</ol>
+
+<p>Добавьте в интерфейс QGIS «<strong>Панель координат</strong>», включив ее через основное меню:<br />
+«Вид Панели инструментов Панель координат».<br />
+<em>(в версиях QGIS новее 3.16 эта панель называется «Дополнительные инструменты оцифровки»).</em></p>
+
+<p><strong>2) Установка дополнительных модулей, необходимых для работы</strong></p>
+
+<p>Установите в QGIS следующие модули:</p>
+
+<p><img src="media/977f827765e8d405656bcab2fc5d340e.png" alt="Значок плагина" /> <strong>Memory Layer Saver</strong></p>
+
+<p>Модуль позволяет <font color="#1f33b4ff"><b>сделать имеющиеся</b></font> в проекте временные векторные слои постоянными, сохраняя их в отдельный файл с расширением *.mldata и именем, как у самого проекта.<br />
+<em>Файл с сохраненными временными слоями создается в момент сохранения проекта в том же месте,</em>
+<em>где расположен файл проекта.</em><br />
+Никаких кнопок или меню в интерфейс QGIS модуль не добавляет.
+<a href="https://plugins.qgis.org/plugins/MemoryLayerSaver">https://plugins.qgis.org/plugins/MemoryLayerSaver</a></p>
+
+<p><img src="media/95d4ee9f405c998cb38ba3ca519ab00c.png" alt="Значок плагина" /> <strong>Geometry Shapes</strong></p>
+
+<p>Плагин позволяет рисовать основные геометрические фигуры в том числе с заданными пользователем размерами.</p>
+
+<p>Возможные варианты: прямоугольники, квадраты, овалы и круги.</p>
+
+<p><em>Используйте клавишу «Shift», чтобы создавать идеальные квадраты и круги.</em></p>
+
+<p>Интегрируется как дополнительная кнопка в панель «Инструменты оцифровки».</p>
+
+<p>Подробности смотрите по ссылкам:</p>
+
+<p><a href="https://plugins.qgis.org/plugins/GeometryShapes">https://plugins.qgis.org/plugins/GeometryShapes</a></p>
+
+<p><a href="https://github.com/pvandegeer/GeometryShapes">https://github.com/pvandegeer/GeometryShapes</a></p>
+
+<p><img src="media/dec4e5ea9f1409053317e3ed98abfd3e.jpeg" alt="Logo of QuickOSM" /> <strong>QuickOSM</strong></p>
+
+<p>Позволяет загружать в QGIS данные OSM, выполняя пользовательские запросы к Overpass.</p>
+
+<p><em>Специальный синтаксический анализатор позволяет увидеть все доступные ключи OSM в QGIS.</em></p>
+
+<p><em>Вы также можете открывать локальные файлы OSM или PBF.</em></p>
+
+<p>Подробности смотрите по ссылкам:</p>
+
+<p><a href="https://plugins.qgis.org/plugins/QuickOSM">https://plugins.qgis.org/plugins/QuickOSM</a></p>
+
+<p><a href="https://docs.qgis.org/3.16/ru/docs/training_manual/qgis_plugins/plugin_examples.html#basic-fa-the-quickosm-plugin"><strong>https://docs.qgis.org/3.16/ru/docs/training_manual/qgis_plugins/plugin_examples.html#basic-fa-the-quickosm-plugin</strong></a></p>
+
+<p><a href="https://docs.3liz.org/QuickOSM">https://docs.3liz.org/QuickOSM</a></p>
+
+<p><a href="https://github.com/3liz/QuickOSM">https://github.com/3liz/QuickOSM</a></p>
+
+<p><strong>3) Выбор для создаваемой 3D-модели участка с эффектными зданиями</strong></p>
+
+<p>С помощью слоя «Здания - для второй части работы» в пределах границ вашей DEM найдите наиболее крупный населенный пункт и выберите в нем территорию, на которой будут присутствовать наиболее эффектные в архитектурном плане здания, для которых имеется информация об их высоте.</p>
+
+<p><strong>Справочно:</strong></p>
+
+<p><em>В слое «Здания - для второй части работы» представлена информация обо всех имеющихся (оцифрованных на данный момент) в OpenStreetMap (OSM) зданиях.</em></p>
+
+<p><em>Здания отображаются на карте при масштабе</em> <strong>1:34 123</strong> <em>и крупнее серой заливкой с черной обводкой. А при увеличении масштаба карты до</em> <strong>1:17 061</strong> <em>и крупнее, здания, высота которых по внесенной в OSM информации превышает 5 метров ( &gt; 5 m ), начнут отображаться красным цветом с указанием (подписью на здании) значения высоты в метрах.</em></p>
+
+<p><em>Здания для которых указана высота менее 5 метров включительно ( =&lt; 5 m ) или для которых информация о высоте отсутствует, будут по-прежнему отображаться серой заливкой с черной обводкой.</em></p>
+
+<p>Для удобства и наглядности, при окончательном выборе необходимого участка задайте</p>
+
+<p>в основном окне QGIS значение масштаба для карты равное <strong>1:15 000</strong>.</p>
+
+<p>Для этого в строке состояния <em>(расположена в самом низу окна QGIS)</em> в пункте «Масштаб» введите в самом окошке, отображающем значения масштаба, «<strong>15000</strong>» и выйдите из окошка.</p>
+
+<p><strong>4) Создание ГИС-слоя границ создаваемой 3D-модели</strong></p>
+
+<p>Откройте меню «Слой Создать слой Новый временный слой».</p>
+
+<p>В появившемся меню задайте <strong>Имя слоя</strong> (например «Границы 3D-модели»),</p>
+
+<p>а для параметра «<strong>Тип геометрии</strong>» выберите из ниспадающего меню значение «<strong>Полигон</strong>».</p>
+
+<p>Остальные параметры оставьте без изменений.</p>
+
+<p><img src="media/2e33def7eb29834675e189eec30d04d0.png" alt="Alt-текст" title="Мой Заголовок изображения" /></p>
+
+<p>Задав необходимые опции, нажмите кнопку «<strong>ОК</strong>».</p>
+
+<p>Выберите в панели «Инструменты оцифровки» кнопку <img src="media/c64c479104fe419c060f33ba64c39b54.png" alt="" />(Draw rectangle geometry).</p>
+
+<p>Удерживая нажатой клавишу «Shift» нарисуйте на карте квадрат желаемого размера и, после появления меню «Set size (метры)»</p>
+
+<p><img src="media/a6370fe89c7468bc99dd84783a8ccaee.png" alt="" /></p>
+
+<p>уточните размеры квадрата, задав его желаемые размеры в метрах, и нажмите кнопку «<strong>ОК</strong>».</p>
+
+<p>Для удобства и наглядности, измените стиль содержащего квадрат слоя на «<strong>Без заливки</strong>».</p>
+
+<p>Выберите в панели инструментов «Панель координат» кнопку <img src="media/297677fd2b744b99c6609ef46cbee723.png" alt="" />(Переместить объекты).</p>
+
+<p>Переместите с помощью это инструмента созданный вами квадрат в наиболее удачное по вашему мнению место (позицию/локацию).</p>
+
+<p>Сохраните изменения в слое с границами создаваемой 3D-модели и выйдите из режима его правки через контекстное меню к слою.</p>
+
+<p>Сохраните и сам QGIS-проект.</p>
+
+<p><strong>5) Загрузка в QGIS-проект векторного слоя зданий из OpenStreetMap</strong></p>
+
+<p>Откройте панель «<strong>Инструменты анализа</strong>» через меню «<strong>Анализ данных</strong>» «<strong>Панель инструментов</strong>»</p>
+
+<p><img src="media/6ff3354428fdd90f6241fc0c429c9970.png" alt="" /></p>
+
+<p>или воспользуйтесь кнопкой <img src="media/bdf719fb0835b920dfc8eaa1a377132e.png" alt="" />, или нажмите комбинацию клавиш «Ctrl + Alt + T».</p>
+
+<p>Введите в окне поиска алгоритмов «<strong>OSM</strong>»</p>
+
+<p><img src="media/738a46b12530532efea5cf03d63b489e.png" alt="" /></p>
+
+<p>и откройте алгоритм «<strong>Download OSM data from a query in an extent</strong>», сделав двойной щелчок мышью на его названии.</p>
+
+<p>В открывшемся окне алгоритма для опции <strong>«Ключ по умолчанию для всех ключей [необязательно]»</strong> задайте значение «<strong>building</strong>».</p>
+
+<p>Для опции «Покрытие» нажмите соответствующую кнопку с многоточием, выберите из появившегося списка вариант «<strong>Рассчитать из слоя</strong>», а затем выберите созданный вами слой границ для 3D-модели. После этого в окошке опции «Покрытие» появятся значения соответствующих координат.</p>
+
+<p>Для сохранения результата (векторного слоя со зданиями) на компьютере, нажмите кнопку<br />
+с многоточием и выберите из появившегося списка вариант «<strong>Сохранить в файл …</strong>».</p>
+
+<p>Данные будут сохраняться в ГИС-формате <strong>*.gpkg</strong> (GeoPackage).</p>
+
+<p>Задайте имя для целевого файла как, например, «Здания».</p>
+
+<p><img src="media/09ca256a1eac1a55b62d1de8e176d7c4.png" alt="" /></p>
+
+<p>Задав необходимые опции, нажмите кнопку «<strong>ОК</strong>» и дождитесь появления нового слоя (загруженного из OSM слоя зданий) в панели «Слои».</p>
+
+<p>Нужный для работы полигональный слой будет иметь название «<strong>Здания_multipolygons</strong>».</p>
+
+<p>Возможно, что в QGIS-проект загрузятся дополнительные слои:</p>
+
+<p>- точечный слой «Здания_points» и</p>
+
+<p>- линейный слой «Здания_lines».</p>
+
+<p>Они вам <strong>не потребуются</strong>. <strong>Удалите их</strong> из QGIS-проекта.</p>
+
+<p>Переименуйте слой «Здания_multipolygons» на «Здания» и</p>
+
+<p>переместите его в панели «Слои» на самый верх.</p>
+
+<p>Обязательно сохраните сам QGIS-проект.</p>
+
+<p>С большой вероятностью может оказаться, что контуры некоторых зданий будут выходить<br />
+за пределы границ, определенных вами для создаваемой 3D-модели.</p>
+
+<p><em>Например:</em></p>
+
+<p><img src="media/c0eb8c486d53bea524d81a7af18e427f.png" alt="" /></p>
+
+<p>Такие здания <em>(их 3D-геометрии)</em> на финальной 3D-модели будут либо выходить за пределы вашей 3D-модели, как бы «торча» из общей модели и повисая в пространстве.</p>
+
+<p><img src="media/cedeea44f5b71f2f48034777e2627bbf.png" alt="" /></p>
+
+<p style="text-align: center;"><img src="https://raw.githubusercontent.com/Alexander-Orlovsky/RUDN-QGIS-3D/main/media/cedeea44f5b71f2f48034777e2627bbf.png" alt="Нет фото" style="width:40%; border:3px solid #ff00ff;" /></p>
+
+<p>Либо (если включена опция «Clip geometries») окажутся «вертикально разрезанными»<br />
+по линии границы вашей 3D-модели и будут выглядеть не вполне естественно для зданий. При этом такие «разрезы» зданий будут находиться на самой границе 3D-модели, придавая ей несколько неопрятный (неэстетичный) вид.</p>
+
+<center>
+<img src="https://raw.githubusercontent.com/Alexander-Orlovsky/RUDN-QGIS-3D/main/media/1a339ac828e14319ec51534d14ff4aef.png" alt="Нет фото" style="width:1400px; height:300px; border:3px solid #00ffff;" />
+</center>
+
+<p>Поэтому удалите такие «лишние» здания из вашего слоя «Здания».</p>
+
+<p>К таким «лишним» зданиям целесообразно отнести не только те, которые пересекают границу вашей 3D-модели, но и те, которые находятся слишком близко к ее краю.</p>
+
+<p>Для этого выделите в панели «Слои» слой «Здания».</p>
+
+<p>Активизируйте инструмент <img src="media/a9905548ce6ba6003e797e9aa3ec4fdf.png" alt="" /> (Выбрать объекты в прямоугольнике или точке).</p>
+
+<p>С его помощью выделите все здания, которые вы посчитаете целесообразным удалить.</p>
+
+<p><em>Выделенные объекты окрашиваются в желтый цвет.</em></p>
+
+<p><em>Использование клавиш «Shift» и «Ctrl» позволит сделать процесс выделения более гибким, позволяя добавлять/исключать объекты к/из текущей выборки.</em></p>
+
+<p><em>За дополнительной информацией о способах выделения объектов на карте вручную обратитесь к соответствующему разделу Документации QGIS по</em> <a href="https://docs.qgis.org/3.16/ru/docs/user_manual/introduction/general_tools.html?#selecting-manually-on-the-map-canvas"><em>ссылке</em></a><em>.</em></p>
+
+<p><em>Обратите особое внимание на возможность использования клавиши «Alt», позволяющей выбирать объекты, которые будут полностью находиться в пределах фигуры выделения.</em></p>
+
+<p>Вернуть случайно сброшенное выделение можно через меню:</p>
+
+<p>«Правка Выделить Вернуть выделение».</p>
+
+<p>В случае необходимости снять все сделанные выделения можно нажав кнопку <img src="media/b30f241c7124518edc03987404f6d902.png" alt="" />.</p>
+
+<p>После того, как вы выделите все здания, которые хотите удалить, откройте в панели «Слои» контекстное меню к слою «Здания» и активируйте для него «Режим правки».</p>
+
+<p>Для удаления из слоя выделенных вами зданий, нажмите кнопку <img src="media/98eb8fd0121ce3c3962f90c62dc5ae3e.png" alt="" /> в интерфейсе QGIS</p>
+
+<p>или клавишу «Delete» на клавиатуре.</p>
+
+<p>Деактивируйте «Режим правки» слоя «Здания», сохранив внесенные в него изменения.</p>
+
+<p><strong>6) Создание 3D-модели самого ландшафта (без зданий)</strong></p>
+
+<p>В панели «Слои» откройте контекстное меню к слою «Границы 3D-модели» и выполните действие «Увеличить до слоя».</p>
+
+<p>Отключите видимость всех слоев, кроме слоя «<strong>Космоснимки Google</strong>».</p>
+
+<p>Запустите модуль Qgis2threejs, нажав кнопку <img src="media/9f83ec45662cf243f75e6e596d91db9d.png" alt="D:\ORL\Внешние_диски\YandexDisk\Скриншоты\2019-12-08_16-20-43.png" /> в панели инструментов интерфейса QGIS.</p>
+
+<p>В открывшемся окне «<strong>Qgis2threejs Exporter</strong>» в панели «<strong>Layers</strong>» включите (активируйте) слой вашей цифровой модели рельефа (DEM) (в моем примере это «n56_e038_1arc_v3»):</p>
+
+<p><img src="media/3e58188aa862654ac2eb56ddf5975a66.png" alt="" /></p>
+
+<p>В «Qgis2threejs Exporter» щелкните правой клавишей мыши по имени слоя вашей DEM и выберите в открывшемся контекстном меню пункт «<strong>Properties…</strong>».</p>
+
+<p>На закладке «<strong>Main</strong>» появившегося окна задайте (выставьте) следующие опции:</p>
+
+<p><img src="media/ecdf60589137893064c068dec2ee8030.png" alt="" /></p>
+
+<p>Перейдите на закладку «<strong>Others</strong>» и задайте (выставьте) следующие опции:</p>
+
+<p><img src="media/5df29c7cdd388ac735d7a84046c46f08.png" alt="" /></p>
+
+<p>Самостоятельно подберите такое значение для опции «Altitude of bottom» (оно определяет высоту боковых сторон 3D-модели), чтобы модель выглядела изящно и эстетично.</p>
+
+<p>Задав необходимые опции, нажмите последовательно клавиши «<strong>Применить</strong>» и «<strong>ОК</strong>».</p>
+
+<p>Откройте в «Qgis2threejs Exporter» меню «<strong>Scene</strong> <strong>Scene Settings…</strong>» и в появившемся окне задайте (введите) следующие опции:</p>
+
+<p><img src="media/a93d36f20fa28f248f1b15e81e647502.png" alt="" /></p>
+
+<p>Оставьте значение для опции «<strong>Z exaggeration</strong>» (преувеличение) равным «<strong>1.0</strong>».</p>
+
+<p>В блоке «<strong>Base Extent</strong>» выберите опцию/метод «<strong>Fixed extent</strong>», нажмите кнопку «<strong>Select…</strong>» и выберите вариант «<strong>Use Layer Extent…</strong>» (использовать охват слоя).</p>
+
+<p>В появившемся окошке выберите из ниспадающего меню «<strong>Границы 3D-модели</strong>»:</p>
+
+<p><img src="media/4f091420d96a39db3c30ef3489d1fb7c.png" alt="" /></p>
+
+<p>Задав указанные опции, нажмите последовательно клавиши «<strong>ОК</strong>».</p>
+
+<p><strong>7) Добавление в 3D-модель зданий и настройка их отображения</strong></p>
+
+<p>В окне «Qgis2threejs Exporter» в панели «Layers» включите (активируйте) слой «<strong>Здания</strong>»:</p>
+
+<p><img src="media/909fa80ae195fbef48026834ddc681ee.png" alt="" /></p>
+
+<p>В «Qgis2threejs Exporter» щелкните правой клавишей мыши по имени слоя «Здания»</p>
+
+<p>и выберите в открывшемся контекстном меню пункт «<strong>Properties…</strong>».</p>
+
+<p>На закладке «<strong>Main</strong>» появившегося окна задайте (выставьте) следующие опции:</p>
+
+<p><img src="media/8fff36ef970b64dd718d1be07503c48c.png" alt="" /></p>
+
+<p>Задав указанные опции, нажмите клавишу «<strong>ОК</strong>».</p>
+
+<p>В результате вы получите 3D-модель с объемными зданиями, возвышающимися над рельефом на одинаковую высоту в 30 м <em>(Вертикальная сторона 3D-объектов зданий задана в 50 м. При этом, для исключения эффекта висящих над земной поверхностью углов зданий, основания зданий опущены на 20 м ниже земной поверхности)</em>.</p>
+
+<p>Сделайте 3D-модель более реалистичной, используя имеющуюся для некоторых зданий в таблице атрибутов слоя информацию об их этажности.</p>
+
+<p><em>Информация о количестве этажей зданий хранится в поле «</em><strong>building:levels</strong><em>» таблицы атрибутов загруженного из OSM слоя контуров зданий.</em></p>
+
+<p>Для этого для опции «<strong>Height</strong>» в блоке «<strong>Geometry</strong>» вместо фиксированного значения «50» скопируйте и вставьте следующее выражение:</p>
+
+<p>CASE</p>
+
+<p>WHEN “building:levels” IS NULL THEN ( 30 + 20 )</p>
+
+<p>ELSE “building:levels” * 4 + 20</p>
+
+<p>END</p>
+
+<p>Сделать для зданий без высоты некоторое варьирование с помощью «randf»</p>
+
+<p>WHEN “building:levels” IS NULL THEN ( 30 * rand(90, 110)/100 + 20 )</p>
+
+<p>В этом выражении высота одного этажа принята равной 4 м.</p>
+
+<p>Для зданий информация о количестве этажей которых в таблице атрибутов отсутствует,</p>
+
+<p>величина их возвышения на земной поверхностью определено в 30 м.</p>
+
+<p>|  <img src="media/a4c893492b0e16ca304b41c7b408cc13.png" alt="" /> <strong>Описание на Wiki OSM</strong> Интересные подробности о том, как OpenStreetMap представляется информация о зданиях, а также о числе этажей здания, расположенных над поверхностью земли, смотрите по ссылкам ниже: <strong>RU:Key:building:</strong>  <a href="https://wiki.openstreetmap.org/wiki/RU:Key:building?uselang=ru">https://wiki.openstreetmap.org/wiki/RU:Key:building?uselang=ru</a> <strong>RU:Key:building:levels</strong> <a href="https://wiki.openstreetmap.org/wiki/RU:Key:building:levels?uselang=ru">https://wiki.openstreetmap.org/wiki/RU:Key:building:levels?uselang=ru</a>  |
+|———————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————-|</p>
+
+<p>Измените цвет зданий на карте в основном окне QGIS, выполнив классификацию для слоя «Здания» по какому-либо логичному для данного случая полю значений, представленному в таблице атрибутов слоя.</p>
+
+<p>Поля в таблице атрибутов слоя «Здания» имеют тип «String» (Текст).</p>
+
+<p>Поэтому для классификации воспользуйтесь методом стилизации «Уникальные значения».</p>
+
+<p>Откройте панель настройки стиля и измените метод стилизации с «Обычный знак» на «Уникальные значения». Для опции «Значение» выберите подходящее поле, например,</p>
+
+<p>«<strong>building:levels</strong>» и какой-либо двух- и более цветный градиент для опции «Цветовой ряд».</p>
+
+<p>Затем нажмите кнопку «Классифицировать».</p>
+
+<p>Теперь выполните классификацию зданий по их этажности из самого модуля Qgis2threejs.</p>
+
+<p>Для этого для зданий в опции «<strong>Color</strong>» в блоке «<strong>Material</strong>» вместо варианта «Feature style» выберите из ниспадающего списка «<strong>Expression</strong>», а в появившееся ниже окошко скопируйте и вставьте следующее выражение:</p>
+
+<p><strong>CASE</strong></p>
+
+<p><strong>WHEN</strong> “building:levels” <strong>&gt;</strong> 5 <strong>THEN</strong> color_rgb<strong>(</strong>0<strong>,</strong> 255<strong>,</strong> 0<strong>)</strong> – высокие</p>
+
+<p><strong>WHEN</strong> “building:levels” <strong>&lt;=</strong> 5 <strong>THEN</strong> color_rgb<strong>(</strong>0<strong>,</strong> 0<strong>,</strong> 255<strong>)</strong> – низкие</p>
+
+<p><strong>ELSE</strong> color_rgb<strong>(</strong>255<strong>,</strong> 0<strong>,</strong> 0<strong>)</strong> – информация о количестве этажей отсутствует</p>
+
+<p><strong>END</strong></p>
+
+<p>Измените представленные в выражении значения на более подходящие для создаваемой вами 3D-модели (учитывая, в том числе, особенности выбранного вами участка местности).</p>
+
+<p>==============================================</p>
+
+<p>Добавьте деревья</p>
+
+<p>Добавьте стрелку Севера</p>
+
+<p>Добавьте колонтитулы</p>
+
+<p>Создайте анимацию</p>
+
+<p>Увеличьте точность DEM и разрешение</p>
+
+<p>Экспортирование 3D-модели в html-веб-страницу</p>
+
+<p><strong>Опубликуйте созданную вами 3D-модель в Интернет</strong></p>
+
+<p><img src="media/b5e5d933e72f23f1721d2b4acc4a8c80.png" alt="" /></p>
+
+<p><strong>Экспортируйте вашу 3D-модель в обменный формат glTF</strong></p>
+
+<p><img src="media/4867c943503509601dd33a2a2eb8dfbb.png" alt="" /></p>
+
+<p>====================================================================================================================</p>
+
+
+
+      <footer class="site-footer">
+        
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+    </main>
+  </body>
+</html>
