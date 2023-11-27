@@ -2,7 +2,6 @@
 layout: default
 title: Серия «Мои замечательные лабораторные»
 description: Моя лаба по 3D
-
 ---
 
 
