@@ -4,10 +4,33 @@
     <meta charset="UTF-8">
 
 {% seo %}
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#157878">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+
+
+
+<!-- Начало блока кода, который я вставил для корректного рендеринга MathJax/LaTeX математических выражений в GitHub Pages -->
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [ ['$$', '$$'], ["\\[", "\\]"] ],
+    processEscapes: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+  }
+});
+</script>
+
+    <script type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+
+<!-- Конец блока кода, который я вставил для корректного рендеринга MathJax/LaTeX математических выражений в GitHub Pages -->
+
+
     {% include head-custom.html %}
   </head>
   <body>
