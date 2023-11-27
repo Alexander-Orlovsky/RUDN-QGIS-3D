@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Серия «Мои замечательные лабораторные»
+title: Серия «Мои замечательные лабораторные» 15:56
 description: Это моя лаба по 3D
 permalink: /README.html
 ---
